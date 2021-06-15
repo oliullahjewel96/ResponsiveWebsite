@@ -46,7 +46,7 @@ img{
 }
 /* Navbar */
 .navbar{
-    background-color: var(--primary-color);
+    background-color: var(--dark-color);
     color: #fff;
     height: 70px;
 }
@@ -73,7 +73,7 @@ img{
 
 .showcase{
     height: 400px;
-    background-color: var(--primary-color);
+    background-color: var(--dark-color);
     color: #fff;
     position: relative;
 }
@@ -193,6 +193,16 @@ img{
 .languages .card:hover{
     transform:translateY(-15px);
 }
+
+
+/* Footer */
+
+.footer .social a{
+    margin:0 10px;
+}
+
+
+
 /* Utilities */
 
 .container{
@@ -252,6 +262,15 @@ img{
 .btn-light{
     background-color: var(--light-color);
     color: #333;
+}
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a{
+    color: #fff;
 }
 
 
