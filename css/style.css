@@ -3,7 +3,11 @@
 
 :root{
     --primary-color:#047aed;
+    --secondary-color:#1c3fa8;
+    --dark-color:#002240;
+    --light-color:#f4f4f4;
 }
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -163,6 +167,11 @@ img{
 }
 
 
+/* Cloud */
+
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
 /* Utilities */
 
 .container{
@@ -201,8 +210,52 @@ img{
      transform: scale(0.98);
 }
 
+/* Background and colored buttons */
+
+.bg-primary,
+.btn-primary{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.bg-secondary,
+.btn-secondary{
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+.bg-dark,
+.btn-dark{
+    background-color: var(--dark-color);
+    color: #fff;
+}
+.bg-light,
+.btn-light{
+    background-color: var(--light-color);
+    color: #333;
+}
+
+
+
 .text-center{
     text-align: center;
+}
+
+/* Text Sizes */
+
+.lead{
+    font-size: 20px;
+}
+
+.sm{
+    font-size: 1rem;
+}
+.md{
+    font-size: 2rem;
+}
+.lg{
+    font-size: 3rem;
+}
+.xl{
+    font-size: 4rem;
 }
 
 .flex{
