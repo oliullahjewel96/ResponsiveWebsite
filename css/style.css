@@ -223,6 +223,12 @@ img{
     grid-column: 1/span 2;
 }
 
+
+/* Docs */
+.docs-head img{
+    width: 200px;
+    justify-self: flex-end;
+}
 /* Footer */
 
 .footer .social a{
