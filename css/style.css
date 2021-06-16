@@ -6,6 +6,8 @@
     --secondary-color:#1c3fa8;
     --dark-color:#002240;
     --light-color:#f4f4f4;
+    --success-color:#5cb85c;
+    --error-color:#d9534f;
 }
 
 *{
@@ -43,6 +45,12 @@ p{
 
 img{
     width: 100%;
+}
+
+code,pre{
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
 }
 /* Navbar */
 .navbar{
@@ -229,6 +237,27 @@ img{
     width: 200px;
     justify-self: flex-end;
 }
+
+.docs-main h3{
+    margin: 20px 0;
+}
+
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.docs-main a:hover{
+    font-weight: bold;
+}
 /* Footer */
 
 .footer .social a{
@@ -242,7 +271,9 @@ img{
     .showcase .grid,
     .stats .grid,
     .cli .grid,
-    .cloud .grid{
+    .cloud .grid,
+    .features-main .grid,
+    .docs-main .grid{
         grid-template-columns:1fr;
         grid-template-rows: 1fr;
     }
@@ -260,6 +291,17 @@ img{
     .cli .grid img{
         grid-column: 1;
         grid-row: 1;
+    }
+
+    .features-head,
+    .features-sub-head,
+    .docs-head{
+        text-align: center;
+    }
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img{
+        justify-self: center;
     }
     
 
@@ -375,6 +417,22 @@ img{
 }
 .xl{
     font-size: 4rem;
+}
+
+.alert{
+    background-color: var(--light-color);
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.alert i{
+    margin-right: 10px;
+}
+
+.alert-success{
+    background-color: var(--success-color);
+    color:#fff;
 }
 
 .flex{
