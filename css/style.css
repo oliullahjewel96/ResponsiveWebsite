@@ -100,6 +100,10 @@ code,pre{
     gap: 30px;
 }
 
+.showcase-text{
+    animation: slideInFromLeft 1s ease-in;
+}
+
 .showcase-form{
     position: relative;
     top: 60px;
@@ -108,6 +112,7 @@ code,pre{
     padding: 40px;
     z-index: 100;
     justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
 }
 
 .showcase-form .form-control{
@@ -146,6 +151,7 @@ code,pre{
 
 .stats{
     padding-top: 100px;
+    animation: slideInFromBottom 1s ease-in;
 }
 
 .stats .stats-heading{
@@ -264,6 +270,41 @@ code,pre{
     margin:0 10px;
 }
 
+/* Animation */
+
+@keyframes slideInFromLeft{
+         0%{
+             transform: translateX(-100%);
+         }
+         100%{
+             transform: translateX(0);
+         }
+}
+@keyframes slideInFromRight{
+         0%{
+             transform: translateX(100%);
+         }
+         100%{
+             transform: translateX(0);
+         }
+}
+@keyframes slideInFromTop{
+         0%{
+             transform: translateY(-100%);
+         }
+         100%{
+             transform: translateY(0);
+         }
+}
+@keyframes slideInFromBottom{
+         0%{
+             transform: translateY(100%);
+         }
+         100%{
+             transform: translateY(0);
+         }
+}
+
 /* Tablet and under */
 
 @media (max-width:780px){
@@ -272,9 +313,11 @@ code,pre{
     .stats .grid,
     .cli .grid,
     .cloud .grid,
-    .features-main .grid,
+    .features-head .grid,
+    .features-sub-head .grid,
+    .docs-head .grid,
     .docs-main .grid{
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
     .showcase{
@@ -302,6 +345,12 @@ code,pre{
     .features-sub-head img,
     .docs-head img{
         justify-self: center;
+    }
+
+    .features-main .grid >*:first-child,
+    .features-main .grid >*:nth-child(2){
+        grid-column: 1;
+        width: 100%;
     }
     
 
